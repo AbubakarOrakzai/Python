@@ -39,3 +39,39 @@ b="20";
 print(type(a));
 print(a);
 
+
+# you can convert srting into integer if it hold valid integer.
+# you can conver float value to integer 
+
+a = "12.4"
+a = float(a)
+
+print(type(a))
+
+
+# Converting values into boolean 
+
+a = 12
+b= 0
+c = 12.4 
+d = 0.0
+e = ""
+f = "hello"
+print(bool(a))
+print(bool(b))
+print(bool(c))
+print(bool(d))
+print(bool(e))
+print(bool(f))
+
+# How does this happen
+"""
+so there is set of values on which the python return false and on the remaining value it is giving true
+1- false
+2- 0
+3- 0.0
+4- ""
+5- []
+6- ()
+7- {}
+"""
