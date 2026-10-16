@@ -22,3 +22,66 @@ marks1 = [95, 93, 90,91]
 updatedmarks = (marks1[0:2])      # List slicing
 print(updatedmarks)
 print(marks1[1:3])
+
+## List Methods
+
+ # list.append -- Adds one element at the end of the list
+rollnumber = [2,1,3]
+rollnumber.append(10)
+print(rollnumber)
+
+# list.sort -- Arragne the list in ascending order
+rollnumber.sort()
+print(rollnumber)
+
+rollnumber.sort(reverse=True)
+print(rollnumber)
+
+# list.reverse -- The will reverse the original list 
+rollnumber.reverse()
+print(rollnumber)
+
+# list.insert(index,element) -- This is use to insert value/element at the specific location first write the index where you want to insert the value/element then write the value/element that you want to insert 
+rollnumber.insert(1,100)
+print(rollnumber)
+
+# list.remove(index)   -- remove the value/element at the specific index that you mention 
+rollnumber.remove(3)
+print(rollnumber)
+
+# list.pop()   --- delete the last value/element of the listy
+rollnumber.pop()
+print(f"Using pop i will remove the last value/element {rollnumber}")
+
+
+## Pratice Question 01
+# Take favourite 3 movie name form the use and store it in the list
+movieslist=[]
+for i in range(0,3):
+     movies=input("Enter your favourite movie name")
+     movieslist.append(movies)
+     print(movieslist)
+
+##  Pratice Quesiton 02
+# Check is the list is palindrome or not
+
+Number03 = [1,2,1]
+cpNumber03 = Number03.copy()
+
+cpNumber03.reverse()
+
+if Number03 == cpNumber03:
+  print("The list is Palindrome")
+else:
+  print("The number is not Palindrome")
+
+# Now check the list which is not palindrome
+Number04 = [1,2,3]
+cpNumber04 = Number04.copy()
+
+cpNumber04.reverse()
+
+if Number04 == cpNumber04:
+  print("The list is Palindrome")
+else:
+  print("The number is not Palindrome")
