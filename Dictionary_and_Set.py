@@ -40,5 +40,5 @@ print(student.values())
 ## -- the answer to that is during enter the key if we write the spelling wrong or enter the key that does not
 ## -- so without the method it will give error but with the get method it will return none if the key is not present in the dictionary
 
-print("Below are the key and value through the get")
+print("Below are the key and value through the get.")
 print(student.get("name"))
