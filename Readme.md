@@ -26,3 +26,9 @@
 -- creating object instance 
 -- default constructor, parameterized       constructor
 
+
+### Oops in python folder 
+# introduction to object oriented programing - class - object
+# Attributes - class Attributes - Instance Attributes
+# Four Pilor - Abstraction - Encapsulation - Inheritance - polmorphism
+
