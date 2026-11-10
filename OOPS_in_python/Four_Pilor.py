@@ -149,3 +149,9 @@ print("--- 4. Polymorphism ---")
 shapes = [Circle(), Square()]
 for shape in shapes:
     shape.draw()  # Same method name, different behavior per object
+
+
+# Abstraction                                       # Encapsullation 
+# Hide the complex mechanism                        The internal parts/state
+# It is hideen so that you can use it easily        It is hide so that you can not damaged/misused
+# You get a simple interfface                       You get a protected internals
