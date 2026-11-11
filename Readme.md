@@ -31,4 +31,8 @@
 # introduction to object oriented programing - class - object
 # Attributes - class Attributes - Instance Attributes
 # Four Pilor - Abstraction - Encapsulation - Inheritance - polmorphism
+# class-methods - class decorator  
+-- (1) Static Method(use so that you can use the function without the self or any other paramter)  
+-- (2) The cls is refer to the class and it will also make th direct change in  the class attribute
+
 
