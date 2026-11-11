@@ -149,9 +149,63 @@ print("--- 4. Polymorphism ---")
 shapes = [Circle(), Square()]
 for shape in shapes:
     shape.draw()  # Same method name, different behavior per object
+print()
 
 
-# Abstraction                                       # Encapsullation 
-# Hide the complex mechanism                        The internal parts/state
-# It is hideen so that you can use it easily        It is hide so that you can not damaged/misused
-# You get a simple interfface                       You get a protected internals
+# ------------------------------------------------------------------------------
+# --- Method Overloading (Compile-time Polymorphism)
+# Concept: Having multiple methods with the same name but different parameters 
+# (number or type of arguments) within the same class.
+# Note: Python does NOT support traditional method overloading directly (the last 
+# defined method overwrites previous ones). However, we achieve this concept 
+# using default arguments or variable-length arguments (*args).
+# ------------------------------------------------------------------------------
+class Calculator:
+    # Using default arguments to simulate method overloading
+    def add(self, a, b, c=0):
+        return a + b + c
+
+print("--- Method Overloading ---")
+calc = Calculator()
+print("Sum of 2 numbers:", calc.add(5, 10))       # Uses a and b, c defaults to 0
+print("Sum of 3 numbers:", calc.add(5, 10, 15))   # Uses a, b, and c
+print()
+
+
+# ------------------------------------------------------------------------------
+# --- Method Overriding (Run-time Polymorphism)
+# Concept: When a child class provides its own specific implementation for a 
+# method that is already defined in its parent class. The method signature 
+# (name and parameters) remains exactly the same, but internal behavior changes.
+# ------------------------------------------------------------------------------
+class Bird:
+    def sound(self):
+        print("Some generic bird sound...")
+
+class Duck(Bird):
+    # This method OVERRIDES the sound() method of the parent Bird class
+    def sound(self):
+        print("Quack Quack!")
+
+class Crow(Bird):
+    # This method OVERRIDES the sound() method of the parent Bird class
+    def sound(self):
+        print("Caw Caw!")
+
+print("--- Method Overriding ---")
+generic_bird = Bird()
+duck = Duck()
+crow = Crow()
+
+generic_bird.sound()  # Calls the parent method
+duck.sound()          # Calls the Duck's overridden method
+crow.sound()          # Calls the Crow's overridden method
+print()
+
+
+# ==============================================================================
+# Abstraction                                   # Encapsulation 
+# Hide the complex mechanism                    The internal parts/state
+# It is hidden so that you can use it easily    It is hidden so that it cannot be damaged/misused
+# You get a simple interface                    You get protected internals
+# ==============================================================================
